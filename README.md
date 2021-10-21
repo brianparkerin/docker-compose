@@ -3,10 +3,31 @@
 This file will setup Wordpress, MySQL & PHPMyAdmin with a single command. Add the code below to a file called "docker-compose.yaml" and run the command
 
 ```
+# create a docker-compose.yml/yaml file
+$ touch docker-compose.yaml
+
+# To Run the project 
 $ docker-compose up -d
 
 # To Tear Down
 $ docker-compose down --volumes
+
+# Stop containers
+$ docker-compose stop
+
+# check the containers
+$ docker ps 
+$ docker ps -a 
+
+# To Tear Down
+$ docker-compose down --volumes
+
+# To Tear Down
+$ docker-compose down --volumes
+
+# To Tear Down
+$ docker-compose down --volumes
+
 ```
 
 ```
