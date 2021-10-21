@@ -73,11 +73,11 @@ services:
       - '8000:80'
     restart: always
     volumes: 
-      - ./:/var/www/html
-      - ./:/var/www/html/wp-content/plugins
-      - ./:/var/www/html/wp-content/themes
-      - ./:/var/www/html/wp-content/uploads
-      - ./:/var/www/html/wp-content/themes/suprema
+     - ./:/var/www/html
+     - ./:/var/www/html/wp-content/plugins/themes:rw
+     - ./:/var/www/html/wp-content/themes/themes:rw
+     - ./:/var/www/html/wp-content/uploads/uploads:rw
+     - ./:/var/www/html/wp-content/themes/suprema/suprema:rw
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
