@@ -14,6 +14,7 @@ version: '3.9'
 
 #Containers of Docker or Services
 services:
+
   # Database
   db:
     image: mysql:8.0
@@ -27,6 +28,7 @@ services:
       MYSQL_PASSWORD: wordpress
     networks:
       - wpsite
+      
   # phpmyadmin
   phpmyadmin:
     depends_on:
@@ -40,6 +42,7 @@ services:
       MYSQL_ROOT_PASSWORD: password 
     networks:
       - wpsite
+      
   # Wordpress
   wordpress:
     depends_on:
