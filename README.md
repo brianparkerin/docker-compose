@@ -1,9 +1,3 @@
-# docker-compose
-just an example of Docker-Compose.yml/yaml file for wordpress devs.
-
-,,,,,,,,,,
-
-
 # Wordpress & Docker example file
 
 This file will setup Wordpress, MySQL & PHPMyAdmin with a single command. Add the code below to a file called "docker-compose.yaml" and run the command
