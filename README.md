@@ -4,7 +4,7 @@ just an example of Docker-Compose.yml/yaml file for wordpress devs.
 ,,,,,,,,,,
 
 
-# Wordpress & Docker
+# Wordpress & Docker example file
 
 This file will setup Wordpress, MySQL & PHPMyAdmin with a single command. Add the code below to a file called "docker-compose.yaml" and run the command
 
@@ -16,12 +16,13 @@ $ docker-compose down --volumes
 ```
 
 ```
-version: '3'
+version: '3.9'
 
+#Containers of Docker or Services
 services:
   # Database
   db:
-    image: mysql:5.7
+    image: mysql:8.0
     volumes:
       - db_data:/var/lib/mysql
     restart: always
@@ -53,7 +54,12 @@ services:
     ports:
       - '8000:80'
     restart: always
-    volumes: ['./:/var/www/html']
+    volumes: 
+      - ./:/var/www/html
+      - ./:/var/www/html/wp-content/plugins
+      - ./:/var/www/html/wp-content/themes
+      - ./:/var/www/html/wp-content/uploads
+      - ./:/var/www/html/wp-content/themes/suprema
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
@@ -64,4 +70,5 @@ networks:
   wpsite:
 volumes:
   db_data:
+
 ```
